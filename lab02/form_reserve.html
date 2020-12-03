@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hotel Booking</title>
+</head>
+<body>
+ <h3>Hotel Booking</h3>
+ <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
+    <table border="1">
+        <tr>
+            <td>
+                Room Type
+            </td>
+            <td>
+                <select name="roomtype">
+                <option value="0"> Please Select </option>
+                <option value="1">Standard</option>
+                <option value="2">Luxury</option>
+                <option value="3">Deluxe</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Number of Guests
+            </td>
+            <td>
+                <select name="numguest">
+                <option value="0"> Please Select </option>
+                <option value="1">Standard</option>
+                <option value="2">Luxury</option>
+                <option value="3">Deluxe</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <input type="text" name="fame" id="fame" >
+                <input type="text" name="lame" id="lame" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                <input type="text" name="email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Arrival
+            </td>
+            <td>
+                <input type="date" name="arrivaldate" id="arrivaldate">
+                <input type="date" name="arrivaltime" id="arrivaltime">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                งานอดิเรก:
+            </td>
+            <td>
+                <input type="checkbox" name="choice1" id="choice1" value="1">ดูหนัง
+                <input type="checkbox" name="choice2" id="choice2" value="2">ฟังเพลง
+                <input type="checkbox" name="choice3" id="choice3" value="3">เล่นเกม
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ความรู้สึกตอนนี้:
+            </td>
+            <td>
+                <select name="emotion">
+                <option value="0">--Select one--</option>
+                <option value="1">Happy</option>
+                <option value="2">Sad</option>
+                <option value="3">Fun</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ข้อเสนอแนะ:
+            </td>
+            <td>
+                <Textarea name="commmet" id="comment" rows="5" cols="50"></Textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Send">
+                <input type="reset" value="Clear">        
+            </td>
+        </tr>
+    </table>
+ </form>
+</body>
+</html>
+
