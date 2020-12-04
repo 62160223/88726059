@@ -8,12 +8,12 @@
 <body>
  <h3>Hotel Booking</h3>
  <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
-    <table border="1">
+    <table>
         <tr>
             <td>
                 Room Type
             </td>
-            <td colspan="2">
+            <td>
                 <select name="roomtype">
                 <option value="0"> Please Select </option>
                 <option value="1">Standard</option>
@@ -29,10 +29,10 @@
             <td>
                 <select name="numguest">
                 <option value="0"> Please Select </option>
-                <option value="1-2"> 1-2 </option>
-                <option value="3-4"> 3-4 </option>
-                <option value="5-6"> 5-6 </option>
-                <option value="7-8"> 7-8 </option>
+                <option value="1-2">1-2</option>
+                <option value="3-4">3-4</option>
+                <option value="5-6">5-6</option>
+                <option value="7-8">7-8</option>
                 </select>
             </td>
         </tr>
@@ -41,8 +41,8 @@
                 Name
             </td>
             <td>
-                <input type="text" name="fame" id="fame" >
-                <input type="text" name="lame" id="lame" >
+                <input type="text" name="fame" id="fame" placeholder="First">
+                <input type="text" name="lame" id="lame" placeholder="Last">
             </td>
         </tr>
         <tr>
@@ -50,7 +50,7 @@
                 Email
             </td>
             <td>
-                <input type="text" name="email" id="email">
+                <input type="text" name="email" id="email" placeholder="john@company.com">
             </td>
         </tr>
         <tr>
@@ -58,8 +58,34 @@
                 Arrival
             </td>
             <td>
-                <input type="date" name="arrivaldate" id="arrivaldate">
-                <input type="time" name="arrivaltime" id="arrivaltime">
+                <input type="date" name="arrivaldate" class="form-control" id="arrivaldate">
+                <select name="arrivaltime" class="form-control" id="arrivaltime">
+                    <option value="">hh : mm</option>
+                    <option value="8:30">8:30</option>
+                    <option value="9:00">9:00</option>
+                    <option value="9:30">9:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                </select>
             </td>
         </tr>
         <tr>
@@ -67,8 +93,35 @@
                 Departure
             </td>
             <td>
-                <input type="date" name="departuredate" id="departuredate">
-                <input type="time" name="departuretime" id="departuretime">
+                <input type="date" name="departuredate" class="form-control" id="departuredate">
+                <select name="departuretime" class="form-control" id="departuretime">
+                    <option value="">hh : mm</option>
+                    <option value="8:30">8:30</option>
+                    <option value="9:00">9:00</option>
+                    <option value="9:30">9:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                </select>
+            </td>
             </td>
         </tr>
         <tr>
@@ -87,7 +140,7 @@
                 </table> 
             </td>
             <td>
-                    <input type="text" name="flightnum" id="flightnum" >
+                    <input type="text" name="flightnum" id="flightnum" placeholder="C1209" >
             </td>
         </tr>
         <tr>
@@ -100,7 +153,13 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <input type="submit" value="Complete Reservation">      
+                <input type="submit" value="Complete Reservation" type="button" class="open">
+                <style type="text/css">
+                    .open {
+                        background-color:#4e4e4e;
+                        color: #FFFFFF;
+                    }
+                </style>  
             </td>
         </tr>
     </table>
