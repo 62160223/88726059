@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทำแบบทดสอบ</title>
+    <style>
+      body {
+            background-image: url("giphy.gif");
+            background-repeat: no-repeat, repeat;
+            background-size: cover;
+            height: auto;
+            position: relative;
+            color: #000000;
+            font-family: Arial;
+            font-size: 20px;
+            text-align: left;
+            }
+
+      </style>
+    <script language="JavaScript">
+      var numQues = 4;
+      var numChoi = 3;
+      var answers = new Array(4);
+
+      answers[0] = "Cascading Style Sheets";
+      answers[1] = "Dynamic HTML";
+      answers[2] = "Netscape";
+      answers[3] = "Common Gateway Interface";
+      
+      function getScore(form) {
+        var score = 0;
+        var currElt;
+        var currSelection;
+        for (i=0; i<numQues; i++) {
+          currElt = i*numChoi;
+          for (j=0; j<numChoi; j++) {
+            currSelection = form.elements[currElt + j];
+            if (currSelection.checked) {
+              if (currSelection.value == answers[i]) {
+                score++;
+                break;
+              }
+            }
+          }
+        }
+        score = Math.round(score/numQues*100);
+        form.percentage.value = score + "%";
+        var correctAnswers = "";
+        for (i=1; i<=numQues; i++) {
+          correctAnswers += i + ". " + answers[i-1] + "\r\n";
+        }
+        form.solutions.value = correctAnswers;
+      }
+      </script>
+</head>
+
+<body>
+  <body >
+      <form name="quiz"><br>
+      1. คำว่า CSS ย่อมาจากอะไร ?<br>
+      <input type="radio" name="q1" value="Colorful Style Symbols">Colorful Style Symbols<br>
+      <input type="radio" name="q1" value="Cascading Style Sheets">Cascading Style Sheets<br>
+      <input type="radio" name="q1" value="Computer Style Symbols">Computer Style Symbols<p>
+
+      2. คำว่า DHTML ย่อมาจากอะไร ?<br>
+      <input type="radio" name="q2" value="Dramatic HTML">Dramatic HTML<br>
+      <input type="radio" name="q2" value="Design HTML">Design HTML<br>
+      <input type="radio" name="q2" value="Dynamic HTML">Dynamic HTML</p>
+
+      3. ใครเป็นผู้สร้าง JAVASCRIPT ?<br>
+      <input type="radio" name="q3" value="Microsoft">Microsoft<br>
+      <input type="radio" name="q3" value="Netscape">Netscape<br>
+      <input type="radio" name="q3" value="Sun Micro Systems">Sun Micro Systems</p>
+
+      4. What does CGI stand for?<br>
+      <input type="radio" name="q4" value="Cascading Gate Interaction">Cascading Gate Interaction<br>
+      <input type="radio" name="q4" value="Common GIF Interface">Common GIF Interface<br>
+      <input type="radio" name="q4" value="Common Gateway Interface">Common Gateway Interface<p>
+
+      <center><input type="button" value="ตรวจคำตอบ" onClick="getScore(this.form)">
+        <input type="reset" value="ลบคำตอบ"> </p>
+        <p> คะแนนที่ได้ = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
+        เฉลย :<br>
+        <textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled></center>
+    </body>
+</body>
+
+</html>
