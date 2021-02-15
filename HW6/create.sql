@@ -8,21 +8,21 @@ CREATE TABLE Artists (
 
 CREATE TABLE Albums (
     AlbumID INT NOT NULL,
-    ArtistID INT NOT NULL,
+    ArtistID INT NOT NULL REFERENCES Artists(ArtistID),
     NameAlbum varchar(100) NOT NULL,
     Released YEAR NOT NULL,
     ImageAlbum VARCHAR(45) ,
-    StyleID INT NOT NULL,
+    StyleID INT NOT NULL REFERENCES Style(StyleID),
     PRIMARY KEY (AlbumID)
 );
 
 CREATE TABLE Songs (
     SongID INT NOT NULL,
-    ArtistID INT NOT NULL,
-    AlbumID INT NOT NULL,
+    ArtistID INT NOT NULL REFERENCES Artists(ArtistID),
+    AlbumID INT NULL REFERENCES Albums(AlbumID),
     NameSong VARCHAR(100) NOT NULL,
     Lengths TIME NOT Null,
-    Lyrics VARCHAR(500) NOT Null,
+    Lyrics VARCHAR(2000) NOT Null,
     PRIMARY KEY (SongID)
 );
 

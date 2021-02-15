@@ -8,12 +8,21 @@ VALUES
 
 INSERT INTO Albums (AlbumID, ArtistID , NameAlbum , Released , ImageAlbum ,StyleID)
 VALUES 
-('101', '15', 'Angel Youth', '2018', '401'),
-('102', '16', 'no song without you', '2020', '402'),
-('103', '16', 'nswy: dream (edits)', '2020', '402'),
-('104', '19', 'Antifungal', '2018', '404'),
-('105', '17', 'Over The Sun', '2020', '405'),
-('106', '18', 'Still Together', '2020', '403');
+('101', '15', 'Angel Youth', '2018','','401'),
+('102', '16', 'no song without you', '2020','','402'),
+('103', '16', 'nswy: dream (edits)', '2020', '','402'),
+('104', '19', 'Antifungal', '2018', '','404'),
+('105', '17', 'Over The Sun', '2020', '','405'),
+('106', '18', 'Still Together', '2020', '','403');
+
+-- INSERT INTO Albums (AlbumID, ArtistID , NameAlbum , Released , ImageAlbum ,StyleID)
+-- VALUES 
+-- ('101', '15', 'Angel Youth', '2018', '401'),
+-- ('102', '16', 'no song without you', '2020', '402'),
+-- ('103', '16', 'nswy: dream (edits)', '2020', '402'),
+-- ('104', '19', 'Antifungal', '2018', '404'),
+-- ('105', '17', 'Over The Sun', '2020', '405'),
+-- ('106', '18', 'Still Together', '2020', '403');
 
 INSERT INTO Styles (StyleID , StyleSong)
 VALUES 
@@ -25,7 +34,6 @@ VALUES
 
 INSERT INTO Songs (SongID, ArtistID, AlbumID, NameSong, Lengths ,Lyrics)
 VALUES 
-
 ('207','15','101','KW','3:17',
 'We’re floating over the district
 I’m buoyed by winsome esprit
