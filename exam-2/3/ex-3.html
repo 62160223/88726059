@@ -1,0 +1,50 @@
+
+<script>
+    document.getElementById("idauthors").select();
+    function showauthors() {
+      var id = document.getElementById("idauthors").value;
+      var name = document.getElementById("nameauthors").value;
+      var penname = document.getElementById("penname").value;
+      var author = document.getElementById("author").innerHTML;
+      var clear = document.getElementById("form").reset();
+      var authors = { authorID: id, author: name, penname: penname };
+      if (true)
+        author +=
+          "รหัส: " +authors.authorID +
+          "<br>" +
+          "ชื่อ: " +authors.author +
+          "<br>" +
+          "นามปากกา: " +authors.penname +
+          "<br><hr>";
+      document.getElementById("author").innerHTML = author;
+      document.getElementById("id").value = "";
+      document.getElementById("nameauthors").value = "";
+      document.getElementById("penname").value = "";
+      document.getElementById("id").select();
+    }
+  </script>
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <meta charset="UTF-8" />
+    <head>
+      <meta charset="UTF-8" />
+    </head>
+      <h2>ผู้แต่ง<hr></h2>
+      <form id="form">
+      <td>รหัสผู้แต่ง</td>
+      <br />
+      <input type="text" id="idauthors" />
+      <br /><td>ชื่อผู้แต่ง</td><br />
+      <input type="text" id="nameauthors" />
+      <br /><td>นามปากกา</td><br />
+      <input type="text" id="penname" /> <br />
+
+     <input type="button" value="Save" onclick="showauthors()" >
+  
+      
+      <hr />
+      <div id="author"></div>
+      <div id="clear"></div>
+    </body>
+  </html>

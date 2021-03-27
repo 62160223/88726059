@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ผู้แต่ง
+                        <hr>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="mybody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost/exam-2/4/authors.php',
+            cache: false,
+            success: function (response) {
+                //alert(html);
+                console.log(response);
+                var obj = JSON.parse(response);
+                $.each(obj, function (key, val) {
+                    var tr = "<tr>";
+
+                    tr = tr + "<tr>";
+                    tr = tr + "<td>รหัส: " + val['authorID'] + "</td>";
+                    tr = tr + "</tr>";
+
+                    tr = tr + "<tr>";
+                    tr = tr + "<td>ชื่อ: " + val['author'] + "</td>";
+                    tr = tr + "</tr>";
+
+                    tr = tr + "<tr>";
+                    tr = tr + "<td>นามปากกา: " + val['penname'] + "<hr></td>";
+                    tr = tr + "</tr>";
+
+                    tr = tr + "</tr>";
+                    $('#mybody').append(tr);
+                });
+                alert(tr);
+            }
+        });
+    </script>
+</body>
+
+</html>

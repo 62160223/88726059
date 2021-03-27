@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+</head>
+
+
+<div id="demo"></div>
+
+<body onload="showPer();">
+
+    <body onload="showPer1();">
+        <script>
+            function showPer() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+
+                        document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "get_authors.php", true);
+                xmlhttp.send();
+
+            }
+        </script>
+
+
+
+    </body>
+</body>
+
+
+
+</html>
